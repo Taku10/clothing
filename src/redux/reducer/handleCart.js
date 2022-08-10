@@ -22,9 +22,27 @@ const handleCart = (state = cart, action) => {
             }
             break;
 
+            case 'DECREASEITEM':
+            const exist2 = state.find((x) => x.id === product.id)
+            if (exist2) {
+                //increase the quantity
+                return state.map((x) =>
+                    x.id === product.id ? { ...x, qty: x.qty - 1 } : x
+                );
+            } else {
+                const product = action.payload
+                return [
+                    ...state,
+                    {
+                        ...product,
+                        qty: 1
+                    }
+                ]
+            }
+
         case 'DELITEM':
             const exist1 = state.find((x) => x.id === product.id);
-            if (exist1.qty === 1) {
+            if (exist1.qty >= 1) {
                 return state.filter((x) => x.id !== exist1.id)
             } else {
                 return state.map((x) =>

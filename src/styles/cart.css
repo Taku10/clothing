@@ -94,9 +94,15 @@
     margin-right:10%;
 }
 
-.proceed-checkout{
-    margin-bottom:2rem;
+.total-proceed{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    width:70%;
+    margin-bottom: 2rem;
 }
+
+
 
 .proceed-checkout button{
     border: none;
@@ -113,6 +119,8 @@
 .proceed-checkout button:focus{
     background-color:rgb(136, 230, 136);
 }
+
+
 
 /* Empty page section */
 

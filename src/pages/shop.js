@@ -34,15 +34,9 @@ const Shop = (props) => {
           </div>
 
         </div>
-        <div className="collection-wrapper">
-          <div className='collection-heading'>
-            <hr />
-            <h2>Categories</h2>
-          </div>
         
-        </div>
-   
       </div>
+    
     </>
   )
 }

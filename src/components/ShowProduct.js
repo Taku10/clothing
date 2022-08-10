@@ -3,12 +3,14 @@ import { useParams } from 'react-router'
 import '../styles/show_product.css'
 import { toRand } from './Featured'
 import star from '../images/star-solid.svg'
-import {addCart} from '../redux/action';
+import { addCart } from '../redux/action';
 import { useDispatch } from 'react-redux';
 import Cart from './Cart'
-import {useNavigate} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
+import toast, { Toaster } from 'react-hot-toast';
+import {ShowProductLoading} from './Skeleton'
 
 
 
@@ -20,8 +22,16 @@ const ShowProduct = (props) => {
 
     const navigate = useNavigate()
     const dispatch = useDispatch();
-    const addProduct = (item)=>{
+
+    const addProduct = (item) => {
         dispatch(addCart(item))
+    }
+
+    const notify = () => toast.success("Added to Cart !!", { duration: 4000, position: 'bottom-right' });
+
+    const cartAdd = () => {
+        addProduct(item)
+        notify()
     }
 
     useEffect(() => {
@@ -35,34 +45,9 @@ const ShowProduct = (props) => {
         getProduct()
     }, [])
 
-    const Loading = () => {
-        return (
-           <>
-                <div className="product-skeleton">
-                    <div className='image-skeleton'>
-                        <Skeleton width={400} height={400}/>
-                    </div>
-                    <div className='details-skeleton'>
-                        <Skeleton width={200} height={55}/>
-                        <Skeleton width={500} height={120}/>
-                        <Skeleton width={100} height={50}/>
-                        <Skeleton width={500} height={120}/>
-                        <Skeleton width={100} height={50}/>
-                        <div className='button-skeleton'>
-                            <Skeleton height={50} width={160} />
-                            <Skeleton height={50} width={160} />
-                            
-                        </div>
-                    </div>
-
-                </div>
-           </>
-        )
-    }
-
+    
     const ShowItem = () => {
         return (
-
             <>
                 <div className='product'>
                     <div className='product-image'>
@@ -79,26 +64,24 @@ const ShowProduct = (props) => {
                             {item.rating ? <p>Rating: {item.rating.rate}</p> : null}
                             <img src={star} alt="" />
                         </div>
-
                         <div className="cart">
-                            <button onClick={()=> addProduct(item)}>Add to Cart</button>
-                            <button onClick={()=>navigate('/shop/cart')}>Go to Cart</button>
+                            <button onClick={() => cartAdd()}>Add to Cart</button>
+                            <button onClick={() => navigate('/shop/cart')}>Go to Cart</button>
                         </div>
                     </div>
-
-
                 </div>
             </>
         )
     }
 
-
     return (
         <div className="container">
             <div className="wrapper">
-                {loading ? <Loading /> : <ShowItem />}
+                {loading ? <ShowProductLoading /> : <ShowItem />}
             </div>
-
+            <div>
+                <Toaster />
+            </div>
         </div>
     )
 }

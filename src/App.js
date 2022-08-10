@@ -18,20 +18,13 @@ function App() {
       setData(response.data)
       // console.log(response.data)
     },[data])
-      
-    
-    
   })
 
   return (
-
-
     <div className="App">
       <ProductContext.Provider value={data}>
       <Layout />
       </ProductContext.Provider>
-
-
     </div>
   );
 }

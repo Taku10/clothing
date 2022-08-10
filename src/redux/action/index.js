@@ -16,9 +16,9 @@ export const delCart = (product)=>{
     }
 }
 
-export const totalCart = (product)=>{
+export const decreaseCart = (product)=>{
     return{
-        type: 'TOTALITEMS',
+        type: 'DECREASEITEM',
         payload: product
     }
 }
