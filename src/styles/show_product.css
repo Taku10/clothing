@@ -1,0 +1,129 @@
+.container {
+    width: 100%;
+    height: 100vh;
+    font-family: 'Mukta', sans-serif;
+}
+
+.wrapper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product {
+    margin-top: 5rem;
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+}
+
+.product .product-image {
+    display: flex;
+    justify-content: center;
+}
+
+.product .product-image img {
+    width: 25rem;
+    height: 25rem;
+}
+
+.product-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 80%;
+}
+
+.product-details .title {
+    font-weight: 400;
+    font-size: 3rem;
+    line-height: 3.6rem;
+}
+
+
+.product-details .category {
+    color: rgb(114, 110, 110);
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.product-details .price {
+    color: rgb(247, 72, 72);
+    font-weight: 700;
+    font-size: 1.7rem;
+
+}
+
+.product-details .description {
+    font-size: 1.2rem;
+    color: rgb(37, 36, 36);
+
+}
+
+.product-details .rating {
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.rating img {
+    width: 1.8rem;
+    align-self: center;
+
+}
+
+.product-details .cart {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 2.5rem;
+    width: 70%;
+}
+
+.cart button {
+    width: 30%;
+    border: none;
+    background-color: rgb(247, 72, 72);
+    color: white;
+    border-radius: 0.4rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.cart button:focus {
+    background-color: rgb(243, 97, 97);
+}
+
+.cart button:hover {
+    background-color: rgb(231, 27, 27);
+}
+
+.product-skeleton {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+    width: 100%;
+    place-items: center;
+}
+
+.image-skeleton {
+    margin-bottom:12rem;
+}
+
+.details-skeleton {
+    margin-top: 4rem;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 8rem;
+}
+
+.button-skeleton{
+    display: flex;
+    gap:6rem;
+}

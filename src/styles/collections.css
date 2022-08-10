@@ -1,0 +1,222 @@
+.collections-container{
+    height:35rem;
+    width:100%;
+    display: grid;
+    place-items: center;
+}
+
+.collections {
+    width:70%;
+    height:30rem;
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: row;
+    gap:2rem;
+    justify-content:center;
+    
+}
+
+.women-image-parent {
+    height:28rem;
+    width: 25rem;
+    overflow: hidden;
+}
+
+.women-collections{
+    background-image: url('../images/woman-hero.png');
+    background-repeat:no-repeat ;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    transition: all .5s;
+   
+    
+   
+    
+}
+
+.women-collections::before {
+    content:'';
+    display: none;
+    top:0;
+    left:0;
+    background-color: rgba(0,0,0,0.4);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    
+ 
+   
+}
+
+.women-image-parent:hover .women-collections{
+    transform: scale(1.08)
+}
+
+.women-image-parent:hover .women-collections:before {
+    display: block;
+    
+  
+}
+
+.women-header{
+    margin-bottom: 2rem;
+    margin-left: 1rem;
+    color: white;
+    
+
+}
+
+.children-image-parent {
+    height:28rem;
+    width: 25rem;
+    overflow: hidden;
+   
+}
+
+.children-collections{
+    background-image: url('../images/kid.jpg');
+    background-repeat:no-repeat ;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    transition: all .5s;
+    
+    
+   
+    
+}
+
+.children-collections::before {
+    content:'';
+    display: none;
+    top:0;
+    left:0;
+    background-color: rgba(0,0,0,0.4);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    
+ 
+   
+}
+
+.children-image-parent:hover .children-collections{
+    transform: scale(1.08)
+}
+
+.children-image-parent:hover .children-collections:before {
+    display: block;
+    
+  
+}
+
+.children-header{
+    margin-bottom: 2rem;
+    margin-left: 1rem;
+    color: white;
+    z-index: 1;
+    
+
+}
+
+.men-image-parent {
+    height:28rem;
+    width: 25rem;
+    overflow: hidden;
+   
+}
+
+.men-collections{
+    background-image: url('../images/men.jpg');
+    background-repeat:no-repeat ;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    transition: all .5s;
+    
+    
+   
+    
+}
+
+.men-collections::before {
+    content:'';
+    display: none;
+    top:0;
+    left:0;
+    background-color: rgba(0,0,0,0.4);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    
+ 
+   
+}
+
+.men-image-parent:hover .men-collections{
+    transform: scale(1.08)
+}
+
+.men-image-parent:hover .men-collections:before {
+    display: block;
+    
+  
+}
+
+.men-header{
+    margin-bottom: 2rem;
+    margin-left: 1rem;
+    color: rgb(231, 226, 226);
+    z-index: 1;
+    
+
+}
+
+.men-header, .children-header, .women-header {
+    font-family: 'Mukta', sans-serif;
+    margin-left: 10%;
+    margin-bottom: 1rem;
+    color: rgb(231, 226, 226);
+}
+
+
+.men-header h2, .children-header h2, .women-header h2{
+    font-weight:500;
+    font-size:2.5rem;
+    
+}
+
+
+.men-header p, .children-header p, .women-header p {
+    font-weight:900;
+    text-transform:uppercase;
+    font-size:0.75rem;
+}
+
+.men-image-parent, .children-image-parent, .women-image-parent {
+    animation-name: collections;
+    animation-duration:2s;
+    transition: opacity 2s;
+    cursor: pointer;
+}
+
+@keyframes collections {
+    from { 
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}

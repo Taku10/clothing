@@ -1,0 +1,159 @@
+.cart-container{
+    max-height:1000rem;
+    width:100%;
+    font-family: 'Mukta', sans-serif;
+    
+}
+
+.cart-wrapper{
+    height:100%;
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    gap: 1rem;
+    place-items: center;
+    margin-top:4rem;
+
+}
+
+.cart-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    width:70%;
+    border-bottom: 1px solid rgb(194, 189, 189);
+    place-items: center;
+    height:15rem;
+    margin-top:4rem;
+    position: relative;
+   
+}
+
+.remove{
+    position:absolute;
+    right:0;
+    top:0;
+    cursor: pointer;
+    border:1px solid;
+    width:1.5rem;
+    text-align:center;
+    border-radius:0.2rem;
+}
+
+.remove:hover{
+    background-color: rgb(247, 55, 55);
+    color: white;
+}
+
+
+.cart-grid-item-left{
+    display: flex;
+    place-items: center;
+}
+
+.cart-grid-item-left img{
+    width: 8rem;
+    margin-top:-3rem;
+}
+
+
+.cart-grid-item-right{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+    justify-content: center;
+    
+}
+
+.cart-grid-item-right h3{
+    width:80%;
+}
+
+.qty-price {
+    display: flex;
+    gap:1rem;
+    font-weight: 500;
+    font-size:1.2rem;
+}
+
+.counter{
+    display: flex;
+    gap:1rem;
+}
+
+.counter button{
+    width:2rem;
+    border: none;
+    background-color: rgb(247, 55, 55);
+    color: white;
+}
+
+.item-total {
+    align-self: flex-end;
+    margin-top:1rem;
+    margin-right:10%;
+}
+
+.proceed-checkout{
+    margin-bottom:2rem;
+}
+
+.proceed-checkout button{
+    border: none;
+    background-color:rgb(89, 228, 89);
+    height:3rem;
+    width:12rem;
+    color: rgb(252, 249, 249);
+    font-size: 1rem;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    border: 1px solid;
+}
+
+.proceed-checkout button:focus{
+    background-color:rgb(136, 230, 136);
+}
+
+/* Empty page section */
+
+.empty-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:2rem;
+}
+
+.empty-title h1{
+    font-weight: 300;
+    font-size: 4rem;
+}
+
+.empty-cart i{
+    font-size: 12rem;
+    color:rgb(243, 127, 127)
+}
+
+.empty-message h1{
+    font-weight:300;
+}
+
+.empty-return-shopping button{
+    border: none;
+    width:12rem;
+    height:3rem;
+    border-radius:0.5rem;
+    color: white;
+    background-color:rgb(247, 72, 72);
+    font-size:1rem;
+    cursor: pointer;
+}
+
+.empty-return-shopping button:hover{
+    background-color:rgb(231, 27, 27);
+}
+
+.empty-return-shopping button:focus{
+    background-color:rgb(243, 97, 97);
+}

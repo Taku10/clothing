@@ -1,0 +1,93 @@
+.sale-container{
+    height:50rem;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    width:100%;
+    gap:3rem;
+    font-family: 'Mukta', sans-serif;
+    margin-top: 4rem;
+    border-bottom: 1px solid rgb(201, 197, 197);
+}
+
+.heading-sale{
+    margin-top: 2rem;
+    display: flex;
+    place-items: center;
+    flex-direction: column;
+    gap:1rem;
+}
+
+hr {
+    width: 3rem;
+    border: 1px solid rgb(247, 55, 55);
+}
+
+.heading-sale h2{
+    font-weight:500;
+    font-size: 2rem;
+    color:#25262a;
+}
+
+.content-sale-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width:70%;
+    height:27rem;
+
+}
+
+.sale-image{
+    background-image: url('../images/sale-image-2.jpg');
+    background-repeat:no-repeat ;
+    background-size: contain;
+}
+
+.sale-content{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-align: center;
+    gap:1rem;
+    
+
+}
+
+.sale-content h3{
+    font-size: 2rem;
+    font-weight: 500;
+    color:rgb(247, 55, 55);
+    margin-top: 9rem;
+}
+ .sale-content p{
+    font-weight: 300;
+    font-size:1rem;
+    color:#8c92a0;
+ }
+
+ .sale-button{
+    width: 8rem;
+    height: 2.5rem;
+    display:grid;
+    place-items: center;
+    font-size: 0.875rem;
+    border: none;
+    background-color: rgb(247, 55, 55);
+    color: rgb(245, 240, 240);
+    border-radius: 0.3rem;
+    font-family: 'Mukta', sans-serif;
+    font-weight: 300;
+    letter-spacing:0.13rem;
+    cursor: pointer;
+    align-self: center;
+ }
+
+ .sale-button a{
+    background-color: rgb(247, 55, 55);
+    color: rgb(245, 240, 240);
+    border-radius: 0.3rem;
+    font-family: 'Mukta', sans-serif;
+    font-weight: 300;
+    letter-spacing:0.13rem;
+    text-decoration: none;
+}
