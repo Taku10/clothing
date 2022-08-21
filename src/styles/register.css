@@ -1,0 +1,45 @@
+.register-container{
+    width: 100%;
+    height: 80vh;
+    padding: 1rem 0rem;
+    display:flex;
+    justify-content: center;
+    font-family: 'Mukta', sans-serif;
+    background-color: rgb(247, 244, 244);
+}
+
+.register-wrapper{
+    width: 100%;
+    height: 100%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    /* border: 1px solid; */
+    background-color: white;
+    border-radius: 1rem;
+}
+
+.register-wrapper h1{
+    color:rgb(247, 55, 55);
+    font-weight:500;
+}
+
+.register-button{
+width: 100%;
+display: grid;
+place-items: center;    
+}
+
+.register-button button {
+    width: 6.5rem;
+    height: 2.5rem;
+    font-size: 1rem;
+    letter-spacing:0.1rem;
+    border: none;
+    background-color: rgb(15, 206, 231);
+    border-radius: 0.5rem;
+    color: white;
+    cursor: pointer;
+}

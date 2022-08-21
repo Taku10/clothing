@@ -22,3 +22,23 @@ export const decreaseCart = (product)=>{
         payload: product
     }
 }
+
+
+//Add item to wish list
+export const addWish = (product)=>{
+    return{
+        type: 'ADDWISH',
+        payload: product
+    }
+}
+
+
+
+//Delete item to cart
+export const delWish = (product)=>{
+    return{
+        type: 'DELWISH',
+        payload: product
+    }
+}
+

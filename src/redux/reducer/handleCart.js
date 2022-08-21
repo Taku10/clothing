@@ -25,7 +25,7 @@ const handleCart = (state = cart, action) => {
             case 'DECREASEITEM':
             const exist2 = state.find((x) => x.id === product.id)
             if (exist2) {
-                //increase the quantity
+                //decrease the quantity
                 return state.map((x) =>
                     x.id === product.id ? { ...x, qty: x.qty - 1 } : x
                 );
@@ -51,15 +51,6 @@ const handleCart = (state = cart, action) => {
             }
             break;
 
-            case 'TOTALITEMS':
-                let amount = 0;
-                let total = 0;
-                state.forEach(item => {
-                    amount += item.qty
-                    total += item.qty * item.price;
-                })
-                   state.qty = amount;
-                   state.total = total 
                 
         default:
             return state;

@@ -49,9 +49,21 @@
     font-size: 2rem;
     font-weight: 300;
 }
+.wish-price {
+    display: flex;
+    justify-content:space-between;
+    width: 20%;
+    align-items:center;
+}
 
-.product-details .price {
-    color: rgb(247, 72, 72);
+.wish-price i{
+    font-size:1.8rem;
+    color:rgb(247, 55, 55);
+    cursor: pointer;
+}
+
+.wish-price .price {
+    color: rgb(15, 206, 231);
     font-weight: 700;
     font-size: 1.7rem;
 
@@ -68,12 +80,13 @@
     display: flex;
     flex-direction: row;
     gap: 1rem;
+    color: rgb(134, 130, 130)
 }
 
-.rating img {
-    width: 1.8rem;
+.rating i {
+    font-size: 1.8rem;
     align-self: center;
-
+    color: gold;
 }
 
 .product-details .cart {
@@ -87,7 +100,7 @@
 .cart button {
     width: 30%;
     border: none;
-    background-color: rgb(247, 72, 72);
+    background-color: rgb(75, 218, 236);
     color: white;
     border-radius: 0.4rem;
     font-size: 1rem;
@@ -99,7 +112,7 @@
 }
 
 .cart button:hover {
-    background-color: rgb(231, 27, 27);
+    background-color: rgb(15, 206, 231);
 }
 
 .product-skeleton {

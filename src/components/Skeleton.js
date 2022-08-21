@@ -63,3 +63,21 @@ export const CartLoading = () => {
         </>
     )
 }
+
+export const LoginLoading = () => {
+    return (
+        <>
+            <div className="login-skeleton-container">
+                <div className='login-skeleton-wrapper'>
+                    <Skeleton height={20} width={70} />
+                    <Skeleton height={20} width={70} />
+                    <Skeleton height={20} width={70} />
+                    <Skeleton height={20} width={70} />
+                    <Skeleton height={20} width={70} />
+                </div>
+
+
+            </div>
+        </>
+    )
+}

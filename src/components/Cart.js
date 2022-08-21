@@ -71,7 +71,7 @@ const Cart = () => {
         return (
             <>
                 {state.length === 0 ? <Empty /> : state.map((item) => (
-                    <div className='cart-grid'>
+                    <div className='cart-grid' key={item.id}>
                         <i className="fa-solid fa-x remove" onClick={() => removeCart(item)}></i>
                         <div className='cart-grid-item-left'>
                             <img src={item.image} alt="" />
